@@ -39,3 +39,14 @@
 
 # debug information files
 *.dwo
+
+build/
+
+# Mujoco
+MUJOCO_LOG.TXT
+
+# Simulation data
+*.dat
+*.png
+
+.cache/
