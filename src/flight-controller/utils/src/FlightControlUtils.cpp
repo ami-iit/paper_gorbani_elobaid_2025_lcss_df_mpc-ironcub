@@ -115,3 +115,47 @@ bool getParameterAndCheckSize(
     }
     return true;
 }
+
+double standardizeThrust(double thrust)
+{
+    // Standardize the thrust value
+    return (thrust - THRUST_MEAN) / THRUST_STD;
+}
+
+double destandardizeThrust(double thrust)
+{
+    // Destandardize the thrust value
+    return (thrust * THRUST_STD) + THRUST_MEAN;
+}
+
+double getThrustMean()
+{
+    return THRUST_MEAN;
+}
+
+double getThrustStd()
+{
+    return THRUST_STD;
+}
+
+double standardizeThrottle(double throttle)
+{
+    // Standardize the throttle value
+    return (throttle - THROTTLE_MEAN) / THROTTLE_STD;
+}
+
+double destandardizeThrottle(double throttle)
+{
+    // Destandardize the throttle value
+    return (throttle * THROTTLE_STD) + THROTTLE_MEAN;
+}
+
+double getThrottleMean()
+{
+    return THROTTLE_MEAN;
+}
+
+double getThrottleStd()
+{
+    return THROTTLE_STD;
+}

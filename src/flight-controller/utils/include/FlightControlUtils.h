@@ -41,4 +41,25 @@ bool getParameterAndCheckSize(
     Eigen::Ref<Eigen::VectorXd> param,
     double size = 3);
 
+#define THRUST_MEAN 125.0
+#define THRUST_STD 125.0
+#define THROTTLE_MEAN 50.0
+#define THROTTLE_STD 50.0
+
+double standardizeThrust(double thrust);
+
+double destandardizeThrust(double thrust);
+
+double getThrustMean();
+
+double getThrustStd();
+
+double standardizeThrottle(double throttle);
+
+double destandardizeThrottle(double throttle);
+
+double getThrottleMean();
+
+double getThrottleStd();
+
 #endif /* end of include guard FLIGHT_CONTROL_UTILS_H */

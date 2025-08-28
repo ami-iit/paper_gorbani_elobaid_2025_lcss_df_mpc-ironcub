@@ -1,5 +1,5 @@
 #include "PyIMPCProblem.h"
-#include <dataDrivenVSMPC/dataDrivenVariableSamplingMPC.h>
+#include <dataFusedMPC/dataFusedMPC.h>
 #include <iDynTree/Transform.h>
 #include <pybind11/eigen.h>
 #include <pybind11/pybind11.h>
@@ -19,10 +19,10 @@ PYBIND11_MODULE(bindingsMPC, m)
              py::arg("parametersHandler"),
              py::arg("mpcInput"));
 
-    py::class_<DataDrivenVariableSamplingMPC, IMPCProblem>(m, "DataDrivenVariableSamplingMPC")
+    py::class_<DataFusedMPC, IMPCProblem>(m, "DataFusedMPC")
         .def(py::init<>())
         .def("configure",
-             [](DataDrivenVariableSamplingMPC& self,
+             [](DataFusedMPC& self,
                 std::shared_ptr<BipedalLocomotion::ParametersHandler::IParametersHandler>
                     parametersHandler,
                 QPInput& mpcInput) {
@@ -35,65 +35,65 @@ PYBIND11_MODULE(bindingsMPC, m)
              py::arg("parametersHandler"),
              py::arg("mpcInput"))
         .def("update", &IMPCProblem::update, py::arg("mpcInput"))
-        .def("solveMPC", &DataDrivenVariableSamplingMPC::solveMPC)
-        .def("getMPCSolution", &DataDrivenVariableSamplingMPC::getMPCSolution)
+        .def("solveMPC", &DataFusedMPC::solveMPC)
+        .def("getMPCSolution", &DataFusedMPC::getMPCSolution)
         .def("getJointsReferencePosition",
-             [](DataDrivenVariableSamplingMPC& self) {
+             [](DataFusedMPC& self) {
                  Eigen::VectorXd jointsReferencePosition;
                  jointsReferencePosition.resize(23);
                  self.getJointsReferencePosition(jointsReferencePosition);
                  return jointsReferencePosition;
              })
         .def("getThrottleReference",
-             [](DataDrivenVariableSamplingMPC& self) {
+             [](DataFusedMPC& self) {
                  Eigen::VectorXd throttleReference(4);
                  self.getThrottleReference(throttleReference);
                  return throttleReference;
              })
         .def("getThrustReference",
-             [](DataDrivenVariableSamplingMPC& self) {
+             [](DataFusedMPC& self) {
                  Eigen::VectorXd jointsReferenceVelocity(4);
                  self.getThrustReference(jointsReferenceVelocity);
                  return jointsReferenceVelocity;
              })
         .def("getFinalCoMPosition",
-             [](DataDrivenVariableSamplingMPC& self) {
+             [](DataFusedMPC& self) {
                  Eigen::Vector3d finalCoMPosition;
                  self.getFinalCoMPosition(finalCoMPosition);
                  return finalCoMPosition;
              })
         .def("getFinalLinMom",
-             [](DataDrivenVariableSamplingMPC& self) {
+             [](DataFusedMPC& self) {
                  Eigen::VectorXd finalLinMom;
                  self.getFinalLinMom(finalLinMom);
                  return finalLinMom;
              })
         .def("getFinalRPY",
-             [](DataDrivenVariableSamplingMPC& self) {
+             [](DataFusedMPC& self) {
                  Eigen::Vector3d finalRPY;
                  self.getFinalRPY(finalRPY);
                  return finalRPY;
              })
         .def("getFinalAngMom",
-             [](DataDrivenVariableSamplingMPC& self) {
+             [](DataFusedMPC& self) {
                  Eigen::VectorXd finalAngMom;
                  self.getFinalAngMom(finalAngMom);
                  return finalAngMom;
              })
         .def("getArtificialEquilibrium",
-             [](DataDrivenVariableSamplingMPC& self) {
+             [](DataFusedMPC& self) {
                  Eigen::VectorXd artificialEquilibrium;
                  artificialEquilibrium.resize(12);
                  self.getArtificialEquilibrium(artificialEquilibrium);
                  return artificialEquilibrium;
              })
-        .def("getNStatesMPC", &DataDrivenVariableSamplingMPC::getNStatesMPC)
-        .def("getNInputMPC", &DataDrivenVariableSamplingMPC::getNInputMPC)
+        .def("getNStatesMPC", &DataFusedMPC::getNStatesMPC)
+        .def("getNInputMPC", &DataFusedMPC::getNInputMPC)
         .def("setHankleMatrices",
-             [](DataDrivenVariableSamplingMPC& self,
+             [](DataFusedMPC& self,
                 const std::vector<std::vector<double>>& inputData,
                 const std::vector<std::vector<double>>& outputData) {
                  return self.setHankleMatrices(inputData, outputData);
              })
-        .def("getValueFunction", &DataDrivenVariableSamplingMPC::getValueFunction);
+        .def("getValueFunction", &DataFusedMPC::getValueFunction);
 }

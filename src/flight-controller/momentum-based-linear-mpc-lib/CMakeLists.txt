@@ -10,7 +10,11 @@ set(MPC_LIBRARY_HDR include/IMPCProblem/IQPUtilsMPC.h
 					include/simpleExample/SimpleExampleMPC.h
 					include/simpleExample/costsSimpleExample.h
 					include/simpleExample/constraintsSimpleExample.h
-					include/simpleExample/systemDynamicsSimpleExample.h)
+					include/simpleExample/systemDynamicsSimpleExample.h
+					include/dataFusedMPC/dataFusedMPC.h
+					include/dataFusedMPC/costsDFMPC.h
+					include/dataFusedMPC/constraintsDFMPC.h
+					include/dataFusedMPC/systemDynamicsDFMPC.h)
 
 set(MPC_LIBRARY_SRC src/IMPCProblem/IQPUtilsMPC.cpp
 					src/IMPCProblem/IMPCProblem.cpp
@@ -18,7 +22,11 @@ set(MPC_LIBRARY_SRC src/IMPCProblem/IQPUtilsMPC.cpp
 					src/simpleExample/SimpleExampleMPC.cpp
 					src/simpleExample/costsSimpleExample.cpp
 					src/simpleExample/constraintsSimpleExample.cpp
-					src/simpleExample/systemDynamicsSimpleExample.cpp)
+					src/simpleExample/systemDynamicsSimpleExample.cpp
+					src/dataFusedMPC/dataFusedMPC.cpp
+					src/dataFusedMPC/costsDFMPC.cpp
+					src/dataFusedMPC/constraintsDFMPC.cpp
+					src/dataFusedMPC/systemDynamicsDFMPC.cpp)
 
 add_library(${LIBRARY_TARGET_NAME} ${MPC_LIBRARY_HDR} ${MPC_LIBRARY_SRC})
 
@@ -37,4 +45,4 @@ ARCHIVE       DESTINATION "${CMAKE_INSTALL_LIBDIR}"                            C
 RUNTIME       DESTINATION "${CMAKE_INSTALL_BINDIR}"                            COMPONENT bin
 PUBLIC_HEADER DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/${LIBRARY_TARGET_NAME}" COMPONENT dev)
 
-
+add_subdirectory(bindings)
