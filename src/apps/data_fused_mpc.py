@@ -38,7 +38,7 @@ if __name__ == "__main__":
     xml_path = rf.findFileByName("iRonCub-Mk3_Mujoco/iRonCub.xml")
     print("xml_path:", xml_path)
     configSim.config["mujoco_model_path"] = str(xml_path)
-    run_viz = False
+    run_viz = True
     n_iter = 5500
     sim = MujocoSim(configSim, run_visulaization=run_viz)
 

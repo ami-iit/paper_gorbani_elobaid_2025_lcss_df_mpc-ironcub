@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ironcub_mujoco_lib"
+version = "0.1.0"
+description = "Ironcub Mujoco Simulator and Jet Model Python Library"
+authors = [
+    { name="Your Name", email="your@email.com" }
+]
+requires-python = ">=3.8"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]

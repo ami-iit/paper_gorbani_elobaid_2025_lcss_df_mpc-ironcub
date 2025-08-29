@@ -1,0 +1,38 @@
+[project]
+name = "multi-rate-mpc-env"
+channels = ["conda-forge"]
+platforms = ["linux-64", "linux-aarch64", "osx-arm64", "win-64"]
+
+[activation.env]
+CMAKE_INSTALL_PREFIX = "$CONDA_PREFIX"
+
+[target.win-64.activation.env]
+CMAKE_INSTALL_PREFIX = "%CONDA_PREFIX%\\Library"
+
+[dependencies]
+cxx-compiler = "*"
+cmake = "*"
+make = "*"
+ninja = "*"
+pkg-config = "*"
+yarp = "*"
+bipedal-locomotion-framework = "*"
+mujoco-python = "*"
+idyntree = "*"
+osqp-eigen = "*"
+pybind11 = "*"
+pytorch = "*"
+resolve-robotics-uri-py = "*"
+scipy = "*"
+toml = "*"
+hdf5storage = "*"
+
+[pypi-dependencies]
+ironcub_mujoco_lib= { path = "./src/mujoco_lib" }
+
+[tasks]
+configure = "cmake -S . -B build -GNinja -DCMAKE_INSTALL_PREFIX=$CMAKE_INSTALL_PREFIX"
+build = { cmd = "cmake --build build", depends-on = ["configure"] }
+install = { cmd = "cmake --install build", depends-on = ["build"] }
+simple-example = { cmd = "mpc-simple-example", depends-on = ["install"] }
+run-simulation = { cmd = "python src/apps/data_fused_mpc.py", depends-on = ["install"] }

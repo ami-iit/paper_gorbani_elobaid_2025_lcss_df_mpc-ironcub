@@ -1,5 +1,5 @@
 import torch
-from nn_jet_model import JetModelTotal # Assuming nn_jet_model.py is in the same directory
+from .nn_jet_model import JetModelTotal
 
 class SingleJetSimulator:
     def __init__(self, dt, initial_thrust=10.0, initial_throttle=0.0, model_path="jet_model_torch/model_7.pth"):

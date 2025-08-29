@@ -52,3 +52,10 @@ MUJOCO_LOG.TXT
 # python bytecode
 *.pyc
 *.pyo
+
+# pixi environments
+.pixi
+*.egg-info
+
+# Hide pycache folders
+__pycache__

@@ -34,11 +34,11 @@
       <param name="weightSlackVariable">10000.0</param>
 
       <group name="TRAJECTORY_MANAGER">
-        <param name="trajectoryFile">"alphaGravity.mat"</param>
+        <param name="trajectoryFile">"src/trajectories/alphaGravity.mat"</param>
       </group>
 
       <group name="POSITION_TRAJECTORY">
-        <param name="trajectoryFile">"stepTrajectory.mat"</param>
+        <param name="trajectoryFile">"src/trajectories/stepTrajectory.mat"</param>
       </group>
 
       <param name="thrustMin">0.0</param>

@@ -19,7 +19,6 @@ find_package(iDynTree REQUIRED)
 find_package(OsqpEigen REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(BipedalLocomotionFramework 0.19.0 REQUIRED)
-find_package(QpSolversEigen REQUIRED)
 
 include_directories(SYSTEM ${EIGEN3_INCLUDE_DIR})
 add_subdirectory(src)
