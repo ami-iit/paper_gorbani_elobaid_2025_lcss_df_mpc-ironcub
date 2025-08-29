@@ -15,15 +15,14 @@ from momentum_based_mpc.bindingsMPC import DataFusedMPC
 import bipedal_locomotion_framework.bindings as blf
 import time
 import mujoco
-import imageio
 from mujoco_lib.input_generator import turb_identSignal_may2024
 from mujoco_lib.single_jet_simulator import SingleJetSimulator as JetNNSimulator
 from mujoco_lib.robot_logging import RobotLoggerPython
 
 OUTPUT_VIDEO_PATH = 'simulation_record.mp4'
 FRAME_RATE = 30       # Video frame rate (Hz)
-SAVE_VIDEO = True
-SAVE_DATA = False
+SAVE_VIDEO = False
+SAVE_DATA = True
 
 if __name__ == "__main__":
 
@@ -249,15 +248,15 @@ if SAVE_DATA:
     logging.save(current_time + ".mat")
 
 # --- Save Video ---
-if SAVE_VIDEO:
-    if frames:
-        print(f"Saving video to {OUTPUT_VIDEO_PATH} at {FRAME_RATE} FPS...")
-        try:
-            with imageio.get_writer(OUTPUT_VIDEO_PATH, fps=FRAME_RATE) as writer:
-                for frame in frames:
-                    writer.append_data(frame)
-            print("Video saved successfully.")
-        except Exception as e:
-            print(f"Error saving video: {e}")
-    else:
-        print("No frames collected, video not saved.")
+# if SAVE_VIDEO:
+#     if frames:
+#         print(f"Saving video to {OUTPUT_VIDEO_PATH} at {FRAME_RATE} FPS...")
+#         try:
+#             with imageio.get_writer(OUTPUT_VIDEO_PATH, fps=FRAME_RATE) as writer:
+#                 for frame in frames:
+#                     writer.append_data(frame)
+#             print("Video saved successfully.")
+#         except Exception as e:
+#             print(f"Error saving video: {e}")
+#     else:
+#         print("No frames collected, video not saved.")

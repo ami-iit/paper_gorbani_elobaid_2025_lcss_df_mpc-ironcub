@@ -116,14 +116,6 @@ const bool DataFusedMPC::setCostAndConstraints(
                                                        m_nIter,
                                                        m_nArtificialEquilibriumStates,
                                                        m_artificialEquilibriumStatesInitPosition));
-    m_vectorConstraints.emplace_back(
-        std::make_unique<
-            DFMPC::ArtificialEquilibriumConstraint>(m_nVar,
-                                                    m_nStates,
-                                                    m_nIter,
-                                                    m_nArtificialEquilibriumStates,
-                                                    m_artificialEquilibriumStatesInitPosition));
-
     m_vectorCosts.emplace_back(
         std::make_unique<DFMPC::RegualarizationCost>(m_nVar, m_nStates, m_nCtrlJoints, m_nJets));
     m_vectorCosts.emplace_back(std::make_unique<DFMPC::ThrottleInitialValueCost>(m_nVar,
@@ -144,12 +136,6 @@ const bool DataFusedMPC::setCostAndConstraints(
                                                            m_nCtrlJoints,
                                                            m_nJets,
                                                            m_nIter));
-    // m_vectorEqualityConstraints.emplace_back(
-    //     std::make_unique<DFMPC::ConstraintEqualitySystemDynamicDF>(m_nVar,
-    //                                                             m_nStates,
-    //                                                             m_nCtrlJoints,
-    //                                                             m_nJets,
-    //                                                             m_nIter));
     m_vectorConstraints.emplace_back(
         std::make_unique<DFMPC::ConstraintInitialStateDF>(m_nStates, m_nVar));
     m_vectorConstraints.emplace_back(std::make_unique<DFMPC::ThrottleConstraintDD>(m_nVar,
@@ -157,11 +143,6 @@ const bool DataFusedMPC::setCostAndConstraints(
                                                                                    m_nIter,
                                                                                    m_nIterSmall,
                                                                                    m_ctrlHorizon));
-    // m_vectorConstraints.emplace_back(
-    //     std::make_unique<DFMPC::JointPositionConstraintDD>(m_nVar,
-    //                                                          m_nStates,
-    //                                                          m_nCtrlJoints,
-    //                                                          m_nIter));
     m_vectorConstraints.emplace_back(std::make_unique<DFMPC::ThrustContraintDD>(m_nVar,
                                                                                 m_nStates,
                                                                                 m_nIter,
@@ -178,7 +159,13 @@ const bool DataFusedMPC::setCostAndConstraints(
                                                         thrustInitPosition,
                                                         m_inputData,
                                                         m_outputData));
-
+    m_vectorConstraints.emplace_back(
+        std::make_unique<
+            DFMPC::ArtificialEquilibriumConstraint>(m_nVar,
+                                                    m_nStates,
+                                                    m_nIter,
+                                                    m_nArtificialEquilibriumStates,
+                                                    m_artificialEquilibriumStatesInitPosition));
     return true;
 }
 
