@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+<robot name="iRonCub-Mk3_Gazebo" portprefix="icubSim" build="1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <device name="flight_control_cpp_config" type="dummy">
+
+    <group name="DD_MPC_CONFIG">
+
+      <param name="enableDebugLogMode">false</param>
+      <param name="periodMPC">0.01</param>
+      <param name="periodMPCLargeSteps">0.1</param>
+      <param name="periodMPCSmallSteps">0.01</param>
+
+      <param name="nIter">15</param>
+      <param name="controlHorizon">8</param>
+      <param name="HankleMatrixHorizon">15</param>
+      <param name="nIterSmall">5</param>
+      <param name="controlledJoints">("l_shoulder_pitch", "l_shoulder_roll", "l_shoulder_yaw", "l_elbow", "r_shoulder_pitch", "r_shoulder_roll", "r_shoulder_yaw", "r_elbow")</param>
+
+      <!-- this is parameter the parameter to select how the joints position to compute the lambda
+          matrix have to be chosen, the possible values are: "unfiltered" or "constant" -->
+      <param name="jointsLambdaOption">"unfiltered"</param>
+
+      <param name="weightCoMPos">(2000.0 2000.0 2000.0)</param>
+      <param name="weightLinMom">(0.65 0.65 0.65)</param>
+      <param name="weightRPY">(1500.0 1500.0 1500.0)</param>
+      <param name="weightAngMom">(100.0 100.0 100.0)</param>
+      <param name="weightDeltaJoint">(45000.0 45000.0 45000.0 45000.0 45000.0 45000.0 45000.0 45000.0)</param>
+      <param name="weightThrottle">0.1</param>
+      <param name="weightThrust">100000.0</param>
+      <param name="weightInitialThrottle">0.1</param>
+      <param name="weightInitialThrust">100000.0</param>
+      <param name="weightGParameters">0.01</param>
+      <param name="weightSlackVariable">10000.0</param>
+
+      <group name="TRAJECTORY_MANAGER">
+        <param name="trajectoryFile">"src/trajectories/alphaGravity.mat"</param>
+      </group>
+
+      <group name="POSITION_TRAJECTORY">
+        <param name="trajectoryFile">"src/trajectories/stepTrajectory.mat"</param>
+      </group>
+
+      <param name="thrustMin">0.0</param>
+      <param name="thrustMax">250.0</param>
+
+      <param name="throttleMin">0.0</param>
+      <param name="throttleMax">100.0</param>
+
+    </group>
+
+  </device>
+</robot>

@@ -1,0 +1,31 @@
+robot_model = "package://iRonCub-Mk3/iRonCub/robots/iRonCub-Mk3/model.urdf"
+
+external_wrenches_list = ["l_sole", "l_sole", "r_sole", "r_sole"]
+
+use_nn_jet_dynamics = true
+
+simulate_noise = false
+
+intial_position = [-0.1,
+                -1.02,
+                0.43,
+                -18.94,
+                18.74,
+                30.94,
+                15.02,
+                -19.0,
+                18.68,
+                31.0,
+                15.0,
+                19.6,
+                8.43,
+                4.64,
+                0.0,
+                1.71,
+                -8.33,
+                19.54,
+                8.49,
+                4.7,
+                -0.01,
+                1.65,
+                -8.37]

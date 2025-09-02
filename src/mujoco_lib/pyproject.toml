@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mujoco_lib"
+version = "0.1.0"
+description = "Ironcub Mujoco Simulator and Jet Model Python Library"
+authors = [
+    { name="Davide Gorbani", email="davide.gorbani@iit.it" }
+]
+requires-python = ">=3.8"
+dependencies = []
+
+[tool.setuptools]
+packages = ["mujoco_lib"]
+
+[tool.setuptools.package-dir]
+"" = ".."
+

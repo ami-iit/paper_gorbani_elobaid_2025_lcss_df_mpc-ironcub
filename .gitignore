@@ -1,3 +1,6 @@
+build/
+.cache/
+
 # Prerequisites
 *.d
 
@@ -39,3 +42,20 @@
 
 # debug information files
 *.dwo
+
+# Mujoco
+MUJOCO_LOG.TXT
+
+# Simulation data
+*.dat
+
+# python bytecode
+*.pyc
+*.pyo
+
+# pixi environments
+.pixi
+*.egg-info
+
+# Hide pycache folders
+__pycache__
