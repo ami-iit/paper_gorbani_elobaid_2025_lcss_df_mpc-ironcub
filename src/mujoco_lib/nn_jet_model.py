@@ -50,7 +50,7 @@ class JetModelTotal:
             full_checkpoint = torch.load(resolved_model_path, map_location=torch.device('cpu'))
         except FileNotFoundError:
             # Fallback for robustness if the script's execution context changes where __file__ points
-            alt_model_path = "software/mujoco/jet_model_torch/model_7.pth" # Original hardcoded path
+            alt_model_path = "src/mujoco_lib/jet_model_torch/model_7.pth" # Original hardcoded path
             print(f"Warning: Model not found at {resolved_model_path}. Trying {alt_model_path}")
             full_checkpoint = torch.load(alt_model_path, map_location=torch.device('cpu'))
 

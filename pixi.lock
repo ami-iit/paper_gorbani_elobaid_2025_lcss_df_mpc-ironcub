@@ -5215,11 +5215,6 @@ packages:
   purls: []
   size: 939947
   timestamp: 1745420480246
-- pypi: ./src/mujoco_lib
-  name: ironcub-mujoco-lib
-  version: 0.1.0
-  sha256: 0b37eecb32a47dc6e697b505f182691315f631ebbb1c1ff0bfda34e80dd7a31a
-  requires_python: '>=3.8'
 - conda: https://conda.anaconda.org/conda-forge/linux-64/irrlicht-1.8.5-hcce6d95_5.conda
   sha256: 72aa5d6348eeed5b8f6df1c711757c31dab061c9a355a72cc18ea4c77527a475
   md5: bd78280d5c89a7377e5b79d491aca6cb
@@ -12259,6 +12254,11 @@ packages:
   - pkg:pypi/msgpack?source=hash-mapping
   size: 87498
   timestamp: 1749813960284
+- pypi: ./src/mujoco_lib
+  name: mujoco-lib
+  version: 0.1.0
+  sha256: c5702870ec4a7ee30c5815374c5095708cc72d2b039b5b4ec29bc928216950d2
+  requires_python: '>=3.8'
 - conda: https://conda.anaconda.org/conda-forge/linux-64/mujoco-python-3.3.2-np2py312hc2dc72a_3.conda
   sha256: 5fc9ed549d41fa23f4d515cf3da3db20d442c94c07ae33b01fdef1c52dce5782
   md5: eefc6d7f9ca1eb85310baa1dbd7d5b12

@@ -28,7 +28,7 @@ toml = "*"
 hdf5storage = "*"
 
 [pypi-dependencies]
-ironcub_mujoco_lib= { path = "./src/mujoco_lib" }
+mujoco_lib= { path = "./src/mujoco_lib" }
 
 [tasks]
 configure = "cmake -S . -B build -GNinja -DCMAKE_INSTALL_PREFIX=$CMAKE_INSTALL_PREFIX"
