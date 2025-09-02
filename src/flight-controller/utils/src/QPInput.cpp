@@ -433,17 +433,3 @@ void QPInput::setThrottleMPC(const Eigen::Ref<const Eigen::VectorXd> throttleMPC
     }
     this->m_throttleMPC = throttleMPC;
 }
-
-void QPInput::setJetModel(std::shared_ptr<JetModel> jetModel)
-{
-    this->m_jetModel = jetModel;
-}
-
-const std::shared_ptr<JetModel> QPInput::getJetModel() const
-{
-    if (m_jetModel == nullptr)
-    {
-        yError() << "QPInput::getJetModel : JetModel pointer is null";
-    }
-    return m_jetModel;
-}

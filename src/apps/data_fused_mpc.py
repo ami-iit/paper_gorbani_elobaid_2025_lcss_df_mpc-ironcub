@@ -6,8 +6,6 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 import numpy as np
-if not hasattr(np, "unicode_"):
-    np.unicode_ = np.str_
 import toml
 from mujoco_lib.ironcub_mujoco_simulator import MujocoConfig, MujocoSim
 import flight_ctrl_lib.bindings as flightCtrl
@@ -21,7 +19,6 @@ from mujoco_lib.robot_logging import RobotLoggerPython
 
 OUTPUT_VIDEO_PATH = 'simulation_record.mp4'
 FRAME_RATE = 30       # Video frame rate (Hz)
-SAVE_VIDEO = False
 SAVE_DATA = True
 
 if __name__ == "__main__":
@@ -90,7 +87,6 @@ if __name__ == "__main__":
     qpInput.setRobotReference(sim.robot)
     qpInput.setEmptyVectorsCollectionServer()
     qpInput.setThrottleMPC(initial_throttle)
-    qpInput.setEmptyJetModel()
     qpInput.setThrustDesMPC(estimated_thrust)
     qpInput.setThrustDotDesMPC(np.zeros(4))
     qpInput.setEstimatedThrustDot(estimated_thrust_dot)
@@ -139,12 +135,6 @@ if __name__ == "__main__":
         final_CoM = []
         final_rpy = []
     
-    if SAVE_VIDEO:
-        render = mujoco.Renderer(sim.model, width=1920, height=1088)
-        frames = []
-        CoMPosition_render = []
-        CoMPosition_ref_render = []
-        counter_video = 0
     counter = 0
     time_sum = 0
 
@@ -164,13 +154,6 @@ if __name__ == "__main__":
             counter = 0
         counter += 1
 
-        if time_ctrl > 30 and SAVE_VIDEO:
-            if counter_video == 3:
-                render.update_scene(sim.data, camera="isometric")
-                pixels = render.render()
-                frames.append(pixels)
-                counter_video = 0
-            counter_video += 1
         if (toc - tic) > MPCPeriod:
             print("MPC exceeded the period by:", (toc - tic) - MPCPeriod)
         desired_thrust = data_fused_mpc.getThrustReference()
@@ -246,17 +229,3 @@ if SAVE_DATA:
     now = time.localtime()
     current_time = time.strftime("%Y-%m-%d_%H-%M-%S", now)
     logging.save(current_time + ".mat")
-
-# --- Save Video ---
-# if SAVE_VIDEO:
-#     if frames:
-#         print(f"Saving video to {OUTPUT_VIDEO_PATH} at {FRAME_RATE} FPS...")
-#         try:
-#             with imageio.get_writer(OUTPUT_VIDEO_PATH, fps=FRAME_RATE) as writer:
-#                 for frame in frames:
-#                     writer.append_data(frame)
-#             print("Video saved successfully.")
-#         except Exception as e:
-#             print(f"Error saving video: {e}")
-#     else:
-#         print("No frames collected, video not saved.")

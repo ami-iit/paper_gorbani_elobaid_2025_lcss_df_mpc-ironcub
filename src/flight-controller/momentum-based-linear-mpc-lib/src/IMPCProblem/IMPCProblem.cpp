@@ -209,7 +209,6 @@ const bool IMPCProblem::solve()
 
     // Convert matrices to sparse
     m_linearMatrixSparse = m_linearMatrix.sparseView();
-    // m_hessianSparse = m_hessian.sparseView();
 
     // Debugging
     // std::cout << "Hessian: " << m_hessian << std::endl;
@@ -255,11 +254,6 @@ const bool IMPCProblem::solve()
         }
     } else
     {
-        // if (!m_solver.updateHessianMatrix(m_hessianSparse))
-        // {
-        //     yError() << "QPProblem::solve : error in updating hessian matrix";
-        //     return false;
-        // }
         if (!m_solver.updateGradient(m_gradient))
         {
             yError() << "QPProblem::solve : error in updating gradient";

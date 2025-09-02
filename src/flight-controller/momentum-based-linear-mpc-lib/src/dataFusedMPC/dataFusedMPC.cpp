@@ -3,7 +3,6 @@
 #include <dataFusedMPC/constraintsDFMPC.h>
 #include <dataFusedMPC/costsDFMPC.h>
 #include <dataFusedMPC/dataFusedMPC.h>
-// #include <linearMomentumBasedMPC/constraintsLinearMomentumMPC.h>
 
 const bool DataFusedMPC::setCostAndConstraints(
     std::weak_ptr<BipedalLocomotion::ParametersHandler::IParametersHandler> parametersHandler,

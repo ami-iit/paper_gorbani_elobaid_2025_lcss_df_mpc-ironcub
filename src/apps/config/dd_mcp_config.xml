@@ -15,7 +15,6 @@
       <param name="HankleMatrixHorizon">15</param>
       <param name="nIterSmall">5</param>
       <param name="controlledJoints">("l_shoulder_pitch", "l_shoulder_roll", "l_shoulder_yaw", "l_elbow", "r_shoulder_pitch", "r_shoulder_roll", "r_shoulder_yaw", "r_elbow")</param>
-      <param name="deltaRPYSafetyStopInDeg">(20.0 20.0 35.0)</param>
 
       <!-- this is parameter the parameter to select how the joints position to compute the lambda
           matrix have to be chosen, the possible values are: "unfiltered" or "constant" -->
@@ -46,13 +45,6 @@
 
       <param name="throttleMin">0.0</param>
       <param name="throttleMax">100.0</param>
-
-      <param name="JointVelocityMax">0.5</param>
-      <param name="JointVelocityMin">-0.5</param>
-
-      <!-- Joint limits in degrees -->
-      <param name="jointPos_max">(20.0, 163.0, 80.0, 75.0, 20.0, 163.0, 80.0, 75.0)</param>
-      <param name="jointPos_min">(-175.0, 12.0, -50.0, -3.0, -175.0, 12.0, -50.0, -3.0)</param>
 
     </group>
 

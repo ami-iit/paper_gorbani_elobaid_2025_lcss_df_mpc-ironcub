@@ -16,7 +16,6 @@ else()
                     OUTPUT_VARIABLE _PYTHON_INSTDIR)
 endif()
 string(STRIP ${_PYTHON_INSTDIR} PYTHON_INSTALL_DIR)
-message(STATUS "Python install directory: ${PYTHON_INSTALL_DIR}")
 
 ######################## Flight Controller Library #############################
 

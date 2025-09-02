@@ -8,7 +8,6 @@
 #ifndef SYSTEM_DYNAMIC_DF_H
 #define SYSTEM_DYNAMIC_DF_H
 
-#include "JetModel.h"
 #include "QPInput.h"
 #include "TrajectoryManager.h"
 #include <Eigen/Dense>

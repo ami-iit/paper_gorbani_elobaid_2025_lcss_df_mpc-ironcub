@@ -163,7 +163,6 @@ private:
     std::shared_ptr<Robot> m_robot;
     std::shared_ptr<BipedalLocomotion::YarpUtilities::VectorsCollectionServer>
         m_vectorsCollectionServer;
-    std::shared_ptr<JetModel> m_jetModel;
 };
 
 class ThrustContraintDD : public IQPConstraint

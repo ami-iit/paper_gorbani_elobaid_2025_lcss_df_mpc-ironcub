@@ -1,7 +1,6 @@
 #ifndef QPINPUT
 #define QPINPUT
 
-#include "JetModel.h"
 #include "Robot.h"
 #include <BipedalLocomotion/YarpUtilities/VectorsCollectionServer.h>
 
@@ -84,15 +83,11 @@ public:
     const Eigen::Ref<const Eigen::VectorXd> getThrottleMPC() const;
     void setThrottleMPC(const Eigen::Ref<const Eigen::VectorXd> throttleMPC);
 
-    const std::shared_ptr<JetModel> getJetModel() const;
-    void setJetModel(std::shared_ptr<JetModel> jetModel);
-
 private:
     std::shared_ptr<Robot> m_robot; // nullptr is set by default
     std::shared_ptr<Robot> m_robotReference; // nullptr is set by default
     std::shared_ptr<BipedalLocomotion::YarpUtilities::VectorsCollectionServer>
         m_vectorsCollectionServer; // nullptr is set by default
-    std::shared_ptr<JetModel> m_jetModel; // nullptr is set by default
     Eigen::Vector3d m_posCoMReference; // CoM position reference
     Eigen::Vector3d m_velCoMReference; // CoM velocity reference
     Eigen::Vector3d m_RPYReference; // base orientation reference

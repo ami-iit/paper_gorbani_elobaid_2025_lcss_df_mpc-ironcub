@@ -123,15 +123,9 @@ void AngularMomentumDynamicDF::updateRPY()
     G_T_B.block(0, 6, 6, m_robotReference->getNJoints()) = J_s;
     Eigen::MatrixXd M_G;
     M_G = G_T_B.inverse().transpose() * m_robotReference->getMassMatrix() * G_T_B.inverse();
-    // std::cout << "M_G:\n"
-    //           << iDynTree::toEigen(G_H_B.asAdjointTransform()).transpose() * M_b
-    //                  * iDynTree::toEigen(G_H_B.asAdjointTransform())
-    //           << std::endl;
     m_inertia = (iDynTree::toEigen(G_H_B.asAdjointTransform()).transpose() * M_b
                  * iDynTree::toEigen(G_H_B.asAdjointTransform()))
                     .block(3, 3, 3, 3);
-
-    // std::cout << "determinant inertia:\n" << m_inertia.determinant() << std::endl;
 
     m_RPY = iDynTree::toEigen(m_robotReference->getBasePose().getRotation().asRPY());
     m_W.setZero();

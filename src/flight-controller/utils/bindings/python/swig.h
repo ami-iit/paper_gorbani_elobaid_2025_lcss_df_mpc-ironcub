@@ -1,12 +1,6 @@
-/**
- * @file swig.h
- * @authors Giulio Romualdi
- * @copyright 2022 Istituto Italiano di Tecnologia (IIT). This software may be modified and
- * distributed under the terms of the BSD-3-Clause license.
- */
 
-#ifndef BIPEDAL_LOCOMOTION_BINDINGS_TYPE_CASTER_SWIG_H
-#define BIPEDAL_LOCOMOTION_BINDINGS_TYPE_CASTER_SWIG_H
+#ifndef TYPE_CASTER_SWIG_H
+#define TYPE_CASTER_SWIG_H
 
 #include <type_traits>
 
@@ -57,5 +51,4 @@ template <class T> inline T* swig_wrapped_pointer_to_pybind(pybind11::object& ob
 
 } // namespace pybind11::detail
 
-#endif // BIPEDAL_LOCOMOTION_BINDINGS_TYPE_CASTER_SWIG_H
-
+#endif // TYPE_CASTER_SWIG_H

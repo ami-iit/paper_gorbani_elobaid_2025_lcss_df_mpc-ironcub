@@ -1,7 +1,7 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-set (CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 11)
 
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 option(BUILD_SHARED_LIBS "Build libraries as shared as opposed to static" ON)
@@ -10,8 +10,6 @@ project(data-fused-mpc-ironcub VERSION 0.0.1)
 
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 add_definitions(-D_USE_MATH_DEFINES)
-
-file(TO_NATIVE_PATH "${PROJECT_SOURCE_DIR}" REPO_ROOT_DIR)
 
 # Load dependencies
 find_package(YARP 3.1 REQUIRED COMPONENTS robotinterface)

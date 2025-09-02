@@ -826,7 +826,6 @@ const bool ArtificialEquilibriumConstraint::readConfigParameters(
     std::weak_ptr<BipedalLocomotion::ParametersHandler::IParametersHandler> parametersHandler,
     QPInput& qpInput)
 {
-    // auto ptr = parametersHandler.lock();
     return true;
 }
 
