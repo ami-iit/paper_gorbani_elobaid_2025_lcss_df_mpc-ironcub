@@ -19,18 +19,14 @@ Davide Gorbani, Mohamed Elobaid, Giuseppe L'Erario, Hosameldin Awadalla Omer Moh
 
 This project uses [pixi](https://prefix.dev/docs/pixi) for environment and dependency management. You can install pixi by following [this installation guide](https://pixi.sh/latest/installation/).
 
-In addition, the [ironcub-models](https://github.com/ami-iit/ironcub-models) repository is required. Please clone and install it following the instructions in its README before running any simulation.
 
 ## Usage
 
-To run the simulation:
+To run the simulation execute in the terminal the command:
 
-1. (If not already done) Install the `ironcub-models` repository as described above.
-
-2. Run the simulation:
-  ```bash
-  pixi run run-simulation
-  ```
+```bash
+pixi run run-simulation
+```
 
 This will execute the python script to run the Mujoco simulation of the iRonCub robot.
 
