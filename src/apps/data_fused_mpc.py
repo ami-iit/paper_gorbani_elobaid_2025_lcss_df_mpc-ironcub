@@ -13,8 +13,8 @@ from mujoco_lib.single_jet_simulator import SingleJetSimulator as JetNNSimulator
 from mujoco_lib.robot_logging import RobotLoggerPython
 
 OUTPUT_VIDEO_PATH = 'simulation_record.mp4'
-FRAME_RATE = 30       # Video frame rate (Hz)
 SAVE_DATA = True
+RUN_VIZ = True
 
 if __name__ == "__main__":
 
@@ -27,12 +27,8 @@ if __name__ == "__main__":
     robot_config_file = Path(__file__).parents[0] / "config/robot.toml"
     configSim.config["robot_config_file"] = str(robot_config_file)
 
-    xml_path = rf.findFileByName("iRonCub-Mk3_Mujoco/iRonCub.xml")
-    print("xml_path:", xml_path)
-    configSim.config["mujoco_model_path"] = str(xml_path)
-    run_viz = True
     n_iter = 5500
-    sim = MujocoSim(configSim, run_visulaization=run_viz)
+    sim = MujocoSim(configSim, run_visulaization=RUN_VIZ)
 
     flightCtrl.useSystemClock()
     param_handler = blf.parameters_handler.YarpParametersHandler()

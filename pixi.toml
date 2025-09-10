@@ -2,6 +2,7 @@
 name = "multi-rate-mpc-env"
 channels = ["conda-forge"]
 platforms = ["linux-64", "linux-aarch64", "osx-arm64", "win-64"]
+preview = ["pixi-build"]
 
 [activation.env]
 CMAKE_INSTALL_PREFIX = "$CONDA_PREFIX"
@@ -26,6 +27,8 @@ resolve-robotics-uri-py = "*"
 scipy = "*"
 toml = "*"
 hdf5storage = "*"
+# Workaround until https://github.com/conda-forge/staged-recipes/pull/30690 is merged
+ironcub-models = { git = "https://github.com/ami-iit/ironcub-models.git", tag = "v0.0.2" }
 
 [pypi-dependencies]
 mujoco_lib= { path = "./src/mujoco_lib" }

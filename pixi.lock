@@ -48,6 +48,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/dbus-1.16.2-h3c4dab8_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/double-conversion-3.3.1-h5888daf_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/eigen-3.4.0-h00ab1b0_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/ergocub-models-0.7.10-ha770c72_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/etils-1.12.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/expat-2.7.1-hecca717_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ffmpeg-7.1.1-gpl_h127656b_906.conda
@@ -97,6 +98,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/imath-3.1.12-h7955e40_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/importlib_resources-6.5.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ipopt-3.14.17-h7fd866c_2.conda
+      - conda: git+https://github.com/ami-iit/ironcub-models?tag=v0.0.2#a33e518b78d2e26c621c0454aa1f9f22a6e21f7b
+        subdir: linux-64
       - conda: https://conda.anaconda.org/conda-forge/linux-64/irrlicht-1.8.5-hcce6d95_5.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/jasper-4.2.8-he3c4edf_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jinja2-3.1.6-pyhd8ed1ab_0.conda
@@ -417,6 +420,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/dbus-1.16.2-heda779d_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/double-conversion-3.3.1-h5ad3122_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/eigen-3.4.0-h2a328a1_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/ergocub-models-0.7.9-h8af1aa0_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/etils-1.12.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/expat-2.7.1-hfae3067_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/ffmpeg-7.1.1-gpl_h30b7fc1_906.conda
@@ -466,6 +470,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/imath-3.1.12-hf428078_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/importlib_resources-6.5.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/ipopt-3.14.17-h06296af_2.conda
+      - conda: git+https://github.com/ami-iit/ironcub-models?tag=v0.0.2#a33e518b78d2e26c621c0454aa1f9f22a6e21f7b
+        subdir: linux-aarch64
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/irrlicht-1.8.5-hc10942e_5.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/jasper-4.2.8-h27a9ab5_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jinja2-3.1.6-pyhd8ed1ab_0.conda
@@ -783,6 +789,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/dbus-1.16.2-hda038a8_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/double-conversion-3.3.1-h286801f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/eigen-3.4.0-h1995070_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/ergocub-models-0.7.10-hce30654_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/etils-1.12.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/expat-2.7.1-hec049ff_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/ffmpeg-7.1.1-gpl_h20db955_106.conda
@@ -822,6 +829,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/imath-3.1.12-h025cafa_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/importlib_resources-6.5.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/ipopt-3.14.17-h945cc1c_2.conda
+      - conda: git+https://github.com/ami-iit/ironcub-models?tag=v0.0.2#a33e518b78d2e26c621c0454aa1f9f22a6e21f7b
+        subdir: osx-arm64
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/irrlicht-1.8.5-hdfd4c6d_5.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/jasper-4.2.8-hc0e5025_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jinja2-3.1.6-pyhd8ed1ab_0.conda
@@ -853,7 +862,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/libclang-cpp19.1-19.1.7-default_hf90f093_3.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/libclang13-20.1.8-default_h91d7d2a_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/libcurl-8.14.1-h73640d1_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/libcxx-20.1.8-hf598326_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/libcxx-21.1.0-hf598326_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/libcxx-devel-19.1.7-h6dc3340_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/libdeflate-1.24-h5773f1b_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/libedit-3.1.20250104-pl5321hafb1f1b_0.conda
@@ -1073,6 +1082,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/win-64/dav1d-1.2.1-hcfcfb64_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/double-conversion-3.3.1-he0c23c2_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/eigen-3.4.0-h91493d7_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/win-64/ergocub-models-0.7.10-h57928b3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/etils-1.12.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/expat-2.7.1-hac47afa_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/ffmpeg-7.1.1-gpl_h70aa942_909.conda
@@ -1113,6 +1123,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/importlib_resources-6.5.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/intel-openmp-2024.2.1-h57928b3_1083.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/ipopt-3.14.17-h812a801_2.conda
+      - conda: git+https://github.com/ami-iit/ironcub-models?tag=v0.0.2#a33e518b78d2e26c621c0454aa1f9f22a6e21f7b
+        build: h9352c13_0
       - conda: https://conda.anaconda.org/conda-forge/win-64/irrlicht-1.8.5-h20dfb44_5.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/jasper-4.2.8-h8ad263b_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jinja2-3.1.6-pyhd8ed1ab_0.conda
@@ -3099,6 +3111,38 @@ packages:
   purls: []
   size: 1089706
   timestamp: 1690273089254
+- conda: https://conda.anaconda.org/conda-forge/linux-64/ergocub-models-0.7.10-ha770c72_0.conda
+  sha256: 78949a35ee0193f6e32004cdb837593689ac7b854e3b20992998e979e20bbbee
+  md5: 2f80d11854e6635dae44054e754b3050
+  license: BSD-3-Clause
+  license_family: BSD
+  purls: []
+  size: 11264105
+  timestamp: 1757395146718
+- conda: https://conda.anaconda.org/conda-forge/linux-aarch64/ergocub-models-0.7.9-h8af1aa0_2.conda
+  sha256: 75a5e9251cb4b04d3e1d4b7f230322b481575dd0c041857c7c9955ec563b3832
+  md5: cd153c21e2327d5f537241f048ae0d74
+  license: BSD-3-Clause
+  license_family: BSD
+  purls: []
+  size: 16601101
+  timestamp: 1756797172169
+- conda: https://conda.anaconda.org/conda-forge/osx-arm64/ergocub-models-0.7.10-hce30654_0.conda
+  sha256: 8d44d008061c943b4fe409bd25ab4c1f2d6940f32fd8fbcb956c6abcceaaee31
+  md5: bb9a137a5b4ba8caea10ccb14721f3a8
+  license: BSD-3-Clause
+  license_family: BSD
+  purls: []
+  size: 11192797
+  timestamp: 1757395601814
+- conda: https://conda.anaconda.org/conda-forge/win-64/ergocub-models-0.7.10-h57928b3_0.conda
+  sha256: 7fe47cdb390813a8db25a6ae9dbf42c7535d54d39a7d823794a91b40a36245d9
+  md5: cb8ce18fb639eef6afbe035e444f40e8
+  license: BSD-3-Clause
+  license_family: BSD
+  purls: []
+  size: 11203160
+  timestamp: 1757395193461
 - conda: https://conda.anaconda.org/conda-forge/noarch/etils-1.12.2-pyhd8ed1ab_0.conda
   sha256: 805ee8cc651a4bf056c39f8b1fdf64b393455bc10b2fd8cc3a99b0f7e7475f77
   md5: 05ecb9e7a6f7bc5319aa61866545a746
@@ -5215,6 +5259,46 @@ packages:
   purls: []
   size: 939947
   timestamp: 1745420480246
+- conda: git+https://github.com/ami-iit/ironcub-models?tag=v0.0.2#a33e518b78d2e26c621c0454aa1f9f22a6e21f7b
+  name: ironcub-models
+  version: 0.0.2
+  build: h9352c13_0
+  subdir: win-64
+  depends:
+  - ergocub-models
+  - vc >=14.2,<15
+  - vc14_runtime >=14.29.30139
+  - ucrt >=10.0.20348.0
+  channel: null
+- conda: git+https://github.com/ami-iit/ironcub-models?tag=v0.0.2#a33e518b78d2e26c621c0454aa1f9f22a6e21f7b
+  name: ironcub-models
+  version: 0.0.2
+  build: hbf21a9e_0
+  subdir: linux-64
+  depends:
+  - ergocub-models
+  - libstdcxx >=15
+  - libgcc >=15
+  channel: null
+- conda: git+https://github.com/ami-iit/ironcub-models?tag=v0.0.2#a33e518b78d2e26c621c0454aa1f9f22a6e21f7b
+  name: ironcub-models
+  version: 0.0.2
+  build: hbf21a9e_0
+  subdir: linux-aarch64
+  depends:
+  - ergocub-models
+  - libstdcxx >=15
+  - libgcc >=15
+  channel: null
+- conda: git+https://github.com/ami-iit/ironcub-models?tag=v0.0.2#a33e518b78d2e26c621c0454aa1f9f22a6e21f7b
+  name: ironcub-models
+  version: 0.0.2
+  build: hbf21a9e_0
+  subdir: osx-arm64
+  depends:
+  - ergocub-models
+  - libcxx >=21
+  channel: null
 - conda: https://conda.anaconda.org/conda-forge/linux-64/irrlicht-1.8.5-hcce6d95_5.conda
   sha256: 72aa5d6348eeed5b8f6df1c711757c31dab061c9a355a72cc18ea4c77527a475
   md5: bd78280d5c89a7377e5b79d491aca6cb
@@ -6896,16 +6980,16 @@ packages:
   purls: []
   size: 368346
   timestamp: 1749033492826
-- conda: https://conda.anaconda.org/conda-forge/osx-arm64/libcxx-20.1.8-hf598326_1.conda
-  sha256: 119b3ac75cb1ea29981e5053c2cb10d5f0b06fcc81b486cb7281f160daf673a1
-  md5: a69ef3239d3268ef8602c7a7823fd982
+- conda: https://conda.anaconda.org/conda-forge/osx-arm64/libcxx-21.1.0-hf598326_1.conda
+  sha256: 58427116dc1b58b13b48163808daa46aacccc2c79d40000f8a3582938876fed7
+  md5: 0fb2c0c9b1c1259bc7db75c1342b1d99
   depends:
   - __osx >=11.0
   license: Apache-2.0 WITH LLVM-exception
   license_family: Apache
   purls: []
-  size: 568267
-  timestamp: 1752814881595
+  size: 568692
+  timestamp: 1756698505599
 - conda: https://conda.anaconda.org/conda-forge/osx-arm64/libcxx-devel-19.1.7-h6dc3340_1.conda
   sha256: 6dd08a65b8ef162b058dc931aba3bdb6274ba5f05b6c86fbd0c23f2eafc7cc47
   md5: 1399af81db60d441e7c6577307d5cf82
@@ -12257,7 +12341,7 @@ packages:
 - pypi: ./src/mujoco_lib
   name: mujoco-lib
   version: 0.1.0
-  sha256: c5702870ec4a7ee30c5815374c5095708cc72d2b039b5b4ec29bc928216950d2
+  sha256: d927454faf30cbcdd22943d9edf885bce8df2c98fe0186a490914efd3a720f8f
   requires_python: '>=3.8'
 - conda: https://conda.anaconda.org/conda-forge/linux-64/mujoco-python-3.3.2-np2py312hc2dc72a_3.conda
   sha256: 5fc9ed549d41fa23f4d515cf3da3db20d442c94c07ae33b01fdef1c52dce5782

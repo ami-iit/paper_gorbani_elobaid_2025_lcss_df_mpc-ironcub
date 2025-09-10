@@ -1,4 +1,5 @@
 robot_model = "package://iRonCub-Mk3/iRonCub/robots/iRonCub-Mk3/model.urdf"
+mujoco_model_path = "package://iRonCub-Mk3/iRonCub/robots/iRonCub-Mk3_Mujoco/iRonCub.xml"
 
 external_wrenches_list = ["l_sole", "l_sole", "r_sole", "r_sole"]
 
