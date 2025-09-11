@@ -19,16 +19,18 @@ Davide Gorbani, Mohamed Elobaid, Giuseppe L'Erario, Hosameldin Awadalla Omer Moh
 
 This project uses [pixi](https://prefix.dev/docs/pixi) for environment and dependency management. You can install pixi by following [this installation guide](https://pixi.sh/latest/installation/).
 
-
 ## Usage
 
-To run the simulation execute in the terminal the command:
+> [!IMPORTANT]
+> The installation has been tested only on Ubuntu system.
+
+To run the simulation, execute in the terminal the command:
 
 ```bash
 pixi run run-simulation
 ```
 
-This will execute the python script to run the Mujoco simulation of the iRonCub robot.
+This will install the project and execute the Python script to run the Mujoco simulation of the iRonCub robot.
 
 > [!NOTE]
 > The simulation might be slow since the jet dynamics is simulated using a neural network, and the inference of the neural network slows down the simulation.
