@@ -43,6 +43,9 @@ If you want to run the toy problem, run:
 pixi run simple-example
 ```
 
+## Acknowledgement
+This work utilized the [blend_my_bot](https://github.com/ami-iit/blend-my-bot) library for render generation.
+
 ## Maintainers
 
 <table>
