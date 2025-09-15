@@ -10,9 +10,10 @@ Davide Gorbani, Mohamed Elobaid, Giuseppe L'Erario, Hosameldin Awadalla Omer Moh
 <br>
 
 <div align="center">
+    <a href="https://arxiv.org/abs/2509.10353"><b>📚 arXiv</b></a> &nbsp;&nbsp;&nbsp;
     <a href="#Usage"><b>🔧 Usage</b></a>
 </div>
-<be>
+<br>
 
 
 https://github.com/user-attachments/assets/f9a0b127-e5e7-4258-9e86-18793648615e
