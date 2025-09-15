@@ -39,3 +39,6 @@ build = { cmd = "cmake --build build", depends-on = ["configure"] }
 install = { cmd = "cmake --install build", depends-on = ["build"] }
 simple-example = { cmd = "mpc-simple-example", depends-on = ["install"] }
 run-simulation = { cmd = "python src/apps/data_fused_mpc.py", depends-on = ["install"] }
+
+[target.osx-arm64.tasks]
+run-simulation = { cmd = "mjpython src/apps/data_fused_mpc.py", depends-on = ["install"] }
