@@ -18,7 +18,7 @@ ninja = "*"
 pkg-config = "*"
 yarp = "*"
 bipedal-locomotion-framework = "*"
-mujoco-python = "*"
+mujoco-python = ">=3.3.2,<4"
 idyntree = "*"
 osqp-eigen = "*"
 pybind11 = "*"
@@ -32,6 +32,9 @@ ironcub-models = { git = "https://github.com/ami-iit/ironcub-models.git", tag = 
 
 [pypi-dependencies]
 mujoco_lib= { path = "./src/mujoco_lib" }
+
+[target.osx-arm64.dependencies]
+ncurses = "*"
 
 [tasks]
 configure = "cmake -S . -B build -GNinja -DCMAKE_INSTALL_PREFIX=$CMAKE_INSTALL_PREFIX"
