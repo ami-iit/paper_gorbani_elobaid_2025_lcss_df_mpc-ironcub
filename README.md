@@ -26,7 +26,7 @@ This project uses [pixi](https://prefix.dev/docs/pixi) for environment and depen
 ## Usage
 
 > [!IMPORTANT]
-> The installation has been tested only on Ubuntu system.
+> The installation has been tested only on Ubuntu and macOs systems.
 
 To run the simulation, execute in the terminal the command:
 
