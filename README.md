@@ -38,6 +38,8 @@ This will install the project and execute the Python script to run the Mujoco si
 
 > [!NOTE]
 > The simulation might be slow since the jet dynamics is simulated using a neural network, and the inference of the neural network slows down the simulation.
+> 
+> At the beginning of the simulation, before the robot takes off, the arms are shaking as a consequence of the tuning of the weight related to the regularisation of the joints position. This choice makes the robot perform better and be more reactive in the flight phase.
 
 If you want to run the toy problem, run:
 ```bash
