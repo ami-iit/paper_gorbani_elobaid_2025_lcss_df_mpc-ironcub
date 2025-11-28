@@ -27,8 +27,7 @@ resolve-robotics-uri-py = "*"
 scipy = "*"
 toml = "*"
 hdf5storage = "*"
-# Workaround until https://github.com/conda-forge/staged-recipes/pull/30690 is merged
-ironcub-models = { git = "https://github.com/ami-iit/ironcub-models.git", tag = "v0.0.2" }
+ironcub-models = "==0.0.2"
 
 [pypi-dependencies]
 mujoco_lib= { path = "./src/mujoco_lib" }
